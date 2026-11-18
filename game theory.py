@@ -169,7 +169,7 @@ def main():
     print(f'\nGlobal Metrics ({metrics_all["Site_Step"].nunique()} groups, {len(predictions_all)} samples):')
     print('=' * 75)
     for i, (_, r) in enumerate(rdf.iterrows()):
-        tag = ' [集成]' if r['Model'] == 'Ensemble_Pred' else ''
+        tag = ' []' if r['Model'] == 'Ensemble_Pred' else ''
         print(f'{i + 1:2d}. {r["Model"]:22s} RMSE={r["RMSE"]:.4f}  MAE={r["MAE"]:.4f}  '
               f'MAPE={r["MAPE"]:.2f}%  R2={r["R2"]:.4f}{tag}')
 
